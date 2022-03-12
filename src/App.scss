@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,100;1,300;1,900&display=swap');
+
+$skyBlue: #65CBD8ff;
+$middleBlue: #91C7D4ff;
+$paleBlue: #BCF1EEff;
+$white: #FFFCFEff;
+$darkerBlue: #3E7184ff;
+
+$maxWidth: 935px;
+
+$mainFont: 'Lato', sans-serif;
+// Thin 100, Thin 100 italic, Light 300, Light 300 italic, Regular 400, Black 900 italic
+
+*{
+  box-sizing: border-box;
+  font-family: $mainFont;
+
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.navBar {
+  height: 100px;
+  width: 100%;
+  background-color: white;
+
+  .navBarContent {
+    max-width: $maxWidth;
+    color: $darkerBlue;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+
+    h2 {
+      margin: auto 0;
+    }
+
+    .navBarLogoContainer {
+      display: flex;
+      width: 40%;
+      justify-content: space-between;
+    }
+
+    .navLogoText {
+      width: 60%;
+      background-image: url("logoText.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .navLogoImg {
+      width: 30%;
+
+      background-image: url("logoImg.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    ul {
+      margin: auto 0;
+      width: 50%;
+      display: flex;
+      justify-content: space-evenly;
+      list-style-type: none;
+      font-size: 2rem;
+
+    }
+
+  }
+
+}
+
+
+
+.banner {
+  //background-image: url("strippedBackYogaBannerCropped.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: $maxWidth;
+  height: 400px;
+  margin: auto;
+}
