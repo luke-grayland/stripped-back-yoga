@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,100;1,300;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,900&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" type="text/css');
 
 $skyBlue: #65CBD8ff;
@@ -8,7 +8,8 @@ $white: #FFFCFEff;
 $darkerBlue: #3E7184ff;
 
 $maxWidth: 935px;
-$gridPicOpacity: 0.65;
+$gridPicOpacity: 0.6;
+$bannerPicOpacity: 0.1;
 
 $mainFont: 'Lato', sans-serif;
 // Thin 100, Thin 100 italic, Light 300, Light 300 italic, Regular 400, Black 900 italic
@@ -61,7 +62,7 @@ h2 {
     }
 
     .navLogoText {
-      width: 60%;
+      width: 75%;
       background-image: url("logoText.png");
       background-size: contain;
       background-repeat: no-repeat;
@@ -78,13 +79,33 @@ h2 {
     }
 
     ul {
-      margin: auto 0;
-      width: 50%;
+      margin: auto;
+      width: 60%;
+      height: 100%;
       display: flex;
-      justify-content: space-evenly;
       list-style-type: none;
       font-size: 2rem;
 
+      li {
+        height: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        transition: 0.2s;
+        padding: 20px;
+
+        h3 {
+          margin: auto;
+          font-weight: 400;
+        }
+
+        &:hover {
+          color: white;
+          background-color: $darkerBlue;
+          transition: 0.2s;
+          cursor: pointer;
+        }
+      }
     }
 
   }
@@ -92,14 +113,23 @@ h2 {
 }
 
 .banner {
-  background-image: url("./yogaPic2.jpeg");
+  background: rgba(0, 0, 0, $bannerPicOpacity) url("./yogaPic2.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-blend-mode: darken;
   width: 100%;
-  height: 500px;
+  height: 400px;
   margin: auto;
+  display: flex;
+  justify-content: center;
+
+  h1 {
+    margin: 30px auto;
+    color: white;
+    font-weight: 700;
+    font-size: 5rem;
+  }
 }
 
 .homeContentGrid {
@@ -115,14 +145,15 @@ h2 {
 
   .contentBox {
     display: flex;
-    justify-content: center;
     color: white;
     height: 220px;
     background-blend-mode: darken;
 
     h1 {
       margin: auto;
-      font-weight: 400;
+      font-weight: 700;
+
+
     }
   }
 
