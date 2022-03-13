@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,100;1,300;1,900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" type="text/css');
 
 $skyBlue: #65CBD8ff;
 $middleBlue: #91C7D4ff;
@@ -103,20 +104,20 @@ h2 {
 
 .homeContentGrid {
   max-width: $maxWidth;
-  height: 500px;
   padding: 10px;
   margin: auto;
   position: relative;
   background-color: white;
-  top: -150px;
+  top: -160px;
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(7, 1fr);
 
   .contentBox {
     display: flex;
     justify-content: center;
     color: white;
+    height: 220px;
     background-blend-mode: darken;
 
     h1 {
@@ -125,8 +126,15 @@ h2 {
     }
   }
 
+  .socialMediaIcon{
+    width: auto;
+    height: 50%;
+    margin: auto;
+
+  }
+
   .boxA {
-    grid-column: 1 / 3;
+    grid-column: 1 / 6;
     grid-row: 1;
     //background-color: $paleBlue;
     background: rgba(0, 0, 0, $gridPicOpacity) url("aboutMePic.jpeg");
@@ -136,7 +144,7 @@ h2 {
   }
 
   .boxB {
-    grid-column: 3 ;
+    grid-column: 6 / 8 ;
     grid-row: 1;
     //background-color: $middleBlue;
     background: rgba(0, 0, 0, $gridPicOpacity) url("carrotYoga.jpeg");
@@ -147,7 +155,7 @@ h2 {
   }
 
   .boxC {
-    grid-column: 1 / 2 ;
+    grid-column: 1 / 3 ;
     grid-row: 2;
     //background-color: $darkerBlue;
     background: rgba(0, 0, 0, $gridPicOpacity) url("yogaPic3.jpeg");
@@ -157,10 +165,30 @@ h2 {
   }
 
   .boxD {
-    grid-column: 2 / 4 ;
+    grid-column: 3 / 8 ;
     grid-row: 2;
     //background-color: $paleBlue;
     background: rgba(0, 0, 0, $gridPicOpacity) url("yogaPic1.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .boxE {
+    grid-column: 1 / 5 ;
+    grid-row: 3;
+    background-color: $skyBlue;
+    //background: rgba(0, 0, 0, $gridPicOpacity) url("yogaPic1.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .boxF {
+    grid-column: 5 / 8 ;
+    grid-row: 3;
+    background-color: $paleBlue;
+    //background: rgba(0, 0, 0, $gridPicOpacity) url("yogaPic1.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

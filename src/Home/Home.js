@@ -1,3 +1,6 @@
+import instagramLogo from '../instagramIcon.svg'
+import facebookLogo from '../facebookIcon.svg'
+
 const Home = () => {
     return (
         <>
@@ -16,6 +19,12 @@ const Home = () => {
                 </div>
                 <div className="boxD contentBox">
                     <h1>Classes</h1>
+                </div>
+                <div className="boxE contentBox">
+                    <img className="socialMediaIcon" src={facebookLogo}/>
+                </div>
+                <div className="boxF contentBox">
+                    <img className="socialMediaIcon" src={instagramLogo}/>
                 </div>
             </div>
         </>
