@@ -7,6 +7,7 @@ $white: #FFFCFEff;
 $darkerBlue: #3E7184ff;
 
 $maxWidth: 935px;
+$gridPicOpacity: 0.65;
 
 $mainFont: 'Lato', sans-serif;
 // Thin 100, Thin 100 italic, Light 300, Light 300 italic, Regular 400, Black 900 italic
@@ -21,6 +22,12 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 
+
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 400;
 }
 
 h2 {
@@ -83,14 +90,87 @@ h2 {
 
 }
 
-
-
 .banner {
-  //background-image: url("strippedBackYogaBannerCropped.png");
-  background-size: contain;
+  background-image: url("./yogaPic2.jpeg");
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  max-width: $maxWidth;
-  height: 400px;
+  background-blend-mode: darken;
+  width: 100%;
+  height: 500px;
   margin: auto;
+}
+
+.homeContentGrid {
+  max-width: $maxWidth;
+  height: 500px;
+  padding: 10px;
+  margin: auto;
+  position: relative;
+  background-color: white;
+  top: -150px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  .contentBox {
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-blend-mode: darken;
+
+    h1 {
+      margin: auto;
+      font-weight: 400;
+    }
+  }
+
+  .boxA {
+    grid-column: 1 / 3;
+    grid-row: 1;
+    //background-color: $paleBlue;
+    background: rgba(0, 0, 0, $gridPicOpacity) url("aboutMePic.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .boxB {
+    grid-column: 3 ;
+    grid-row: 1;
+    //background-color: $middleBlue;
+    background: rgba(0, 0, 0, $gridPicOpacity) url("carrotYoga.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+  }
+
+  .boxC {
+    grid-column: 1 / 2 ;
+    grid-row: 2;
+    //background-color: $darkerBlue;
+    background: rgba(0, 0, 0, $gridPicOpacity) url("yogaPic3.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .boxD {
+    grid-column: 2 / 4 ;
+    grid-row: 2;
+    //background-color: $paleBlue;
+    background: rgba(0, 0, 0, $gridPicOpacity) url("yogaPic1.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: $darkerBlue;
+
 }
